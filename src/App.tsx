@@ -1,23 +1,27 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { GameDetails } from './types';
 
 function App() {
+  
+  const gameDetails: GameDetails = {
+    isOngoing: false,
+    gameMode: 1,
+    marks: [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    moveCount: 0,
+  };
+
+  console.log(gameDetails);
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <button>
+          Single Player
+        </button>
+        <button onClick = { () => console.log(gameDetails) }>
+          Two Players
+        </button>
       </header>
     </div>
   );
