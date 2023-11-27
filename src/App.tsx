@@ -1,10 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { GameDetails } from './types';
 
 function App() {
-  
+
   const gameDetails: GameDetails = {
     isOngoing: false,
     gameMode: 1,
